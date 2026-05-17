@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,body {
+    background-color: black;
+    height: 100%;
+    font-family: "Archivo Black", sans-serif;
+    margin: 0;
+}
+
+.contenu {
+    display: flex;
+    min-height: 100%;
+}
+
+.navbar {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(8, 8, 8);
+    border-radius: 0 36px 36px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor:pointer;
+}
+
+.feed {
+    flex: 3;
+}
+
+#branding {
+    display:flex;
+    flex-direction: row;
+    gap: 32px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    border: none;
+    border-radius: 90px;
+    padding: 6px 36px;
+    width: 95%;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+}
+
+#post-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    border-radius: 90px;
+    padding: 6px 36px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+
+#post-button:hover {
+    background-color: rgb(209, 209, 209);
+    transition: all 200ms;
+}
+
+#profile {
+    width: 100%;
+    box-sizing: border-box;
+    height: 10%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgb(0,0,0,0.25);
+    color: black;
+    border-top: 1px solid rgb(40, 40, 40);
+    border-radius: 0 0 36px 0;
+    padding: 6px 36px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.profile-pfp {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-name {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.profile-username {
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+    font-size: 14px;
+}
