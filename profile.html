@@ -2,34 +2,54 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./css/firstprofile.css">
-        <title>Modifier Profil - Noxel</title>
+        <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="./css/feed.css">
+        <title>Ton Profil - Noxel</title>
     </head>
     <body>
-        <div class="container">
-            <div class="entete">
-                <button class="back-button" onclick="signup()">
-                    <img class="back-icon" src="public/back.svg" height="36px">
-                </button>
+        <div class="contenu">
+            <nav class="navbar">
+                <div id="branding">
+                    <img src="public/noxel_logo.svg" width="64px">
+                    <p>Noxel</p>
+                </div>
+                <ul>
+                    <li onclick="feed()">
+                        <img src="./public/home.svg" width="32px">
+                        Fil d'actualité
+                    </li>
+                    <li onclick="relations()">
+                        <img src="./public/relations.svg" width="32px">
+                        Relations
+                    </li>
+                    <li onclick="messagery()"> 
+                        <img src="./public/message.svg" width="32px">
+                        Messagerie
+                    </li>
+                    <li onclick="favorites()">
+                        <img src="./public/favorite.svg" width="32px">
+                        Favoris
+                    </li>
+                </ul>
+                <button id="post-button" onclick="newpost()">Nouvelle Publication</button>
+                <div id="profile" onclick="profile()"></div>
+            </nav>
 
+            <div class="profile">
                 <h1>Ton Profil</h1>
+
+                <div id="profile-section"></div>
+
+                <button id="edit-profile" class="profile-edit-btn" onclick="editProfil()">
+                    Modifier le profil
+                </button>
             </div>
-
-            <form id="first-profile-form">
-                <input type="file" id="image-input" accept="image/*" hidden/>
-                <img id="pfp" src="./public/default_pfp.jpg" width="128px">
-                <button type="button" id="image" onclick="edit()">Modifier</button>
-
-                <label for="username">PSEUDO</label>
-                <input type="text" id="username" required>
-                
-                <button id="finish-button" type="submit">Terminer</button>
-            </form>
         </div>
     </body>
+    <script src="./js/feed.js"></script>
     <script src="./js/users.js"></script>    
     <script src="./js/navigation.js"></script>
     <script src="./js/edit-pfp.js"></script>
-    <script src="./js/first-edit-profile.js"></script>
+    <script src="./js/profile.js"></script>
 </html>
 

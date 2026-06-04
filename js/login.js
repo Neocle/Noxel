@@ -25,7 +25,6 @@ loginform.addEventListener("submit", (e) => {
     }
 
     for (let i = 0; i < users.length; i++) {
-        console.log(users[i].email + " " + users[i].password);
         if (users[i].email === email && users[i].password === password) {
             break;
         }

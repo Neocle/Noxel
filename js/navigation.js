@@ -20,6 +20,16 @@ function feed() {
     window.location.href="./feed.html"
 }
 
+function newpost() {
+    const me = localStorage.getItem("me");
+    if (!me) {
+        window.location.href="./index.html"
+        return;
+    }
+
+    window.location.href="./newpost.html"
+}
+
 function profile() {
     const me = localStorage.getItem("me");
     if (!me) {

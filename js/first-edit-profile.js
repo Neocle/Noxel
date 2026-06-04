@@ -5,7 +5,7 @@ firstProfileForm.addEventListener("submit", (e) => {
 
     const username = document.getElementById("username").value.trim();
     const pfp = document.getElementById("pfp").src.trim();
-
+    
     currentUser.username = username;
     currentUser.pfp = pfp;
 

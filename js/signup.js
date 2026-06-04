@@ -73,7 +73,17 @@ signupform.addEventListener("submit", (e) => {
         return;
     }
 
-    user = new User(name, surname, email, password, stayLogged);
+    user = {
+        name: name,
+        surname: surname,
+        email: email,
+        password: password,
+        stayLogged: stayLogged,
+        username: null,
+        pfp: null,
+        follows: []
+    }
+
     users.push(user);
 
     saveUsers();

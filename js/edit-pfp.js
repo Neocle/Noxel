@@ -13,8 +13,6 @@ imageInput.addEventListener("change", () => {
 
     reader.onload = function () {
         pfp.src = reader.result;
-
-        console.log(reader.result);
     };
 
     reader.readAsDataURL(img);
