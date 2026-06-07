@@ -1,1 +1,1 @@
-https://noxel.loisalirol.com/
+https://neocle.github.io/Noxel/
