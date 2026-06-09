@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mon Feed</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/feed.css">
+    </head>
+    <body>
+        <div class="contenu">
+            <nav class="navbar">
+                <div id="branding">
+                    <img src="public/noxel_logo.svg" width="64px">
+                    <p>Noxel</p>
+                </div>
+                
+                <ul>
+                    <li onclick="feed()">
+                        <img src="./public/home_selected.svg" width="32px">
+                        Fil d'actualité
+                    </li>
+                    <li onclick="relations()">
+                        <img src="./public/relations.svg" width="32px">
+                        Relations
+                    </li>
+                    <li onclick="messagery()"> 
+                        <img src="./public/message.svg" width="32px">
+                        Messagerie
+                    </li>
+                    <li onclick="favorites()">
+                        <img src="./public/favorite.svg" width="32px">
+                        Favoris
+                    </li>
+                </ul>
+                <button id="post-button" onclick="newpost()">Nouvelle Publication</button>
+                <div id="profile" onclick="profile()"></div>
+            </nav>
+            <div class="feed" id="feed">
+                <div id="searchbar">
+                    <input id="searchinput" placeholder="Rechercher une publication...">
+                </div>
+                <div id="imgfulldiv" class="post-image-full" onclick="closeImg()">
+                    <img id="imgfull" src="">
+                </div>
+
+                <div id="posts"></div>
+            </div>
+        </div>
+    </body>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/feed.js"></script>
+    <script src="./js/users.js"></script>
+    <script src="./js/posts.js"></script>
+</html>
