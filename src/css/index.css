@@ -62,6 +62,9 @@ footer {
     border: none;
     border-radius: 90px;
     padding: 6px 36px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
 
 #signup-button:hover {
@@ -112,6 +115,8 @@ footer {
     border: 1px solid rgb(187, 187, 187);
     border-radius: 90px;
     padding: 6px 36px;
+    text-decoration: none;
+    text-align: center;
 }
 
 #login-button:hover {

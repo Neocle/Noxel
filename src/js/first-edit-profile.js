@@ -19,5 +19,5 @@ firstProfileForm.addEventListener("submit", (e) => {
     saveUsers();
     saveCurrentUser(currentUser);
 
-    feed();
+    window.location.href="../feed/index.html";
 });

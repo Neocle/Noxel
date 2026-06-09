@@ -2,7 +2,7 @@ addEventListener("DOMContentLoaded", (e) => {
     const me = JSON.parse(localStorage.getItem("me"));
 
     if(!me) {
-        back();
+        window.location.href = "../index.html";
     }
 
     addProfileButton();
@@ -14,11 +14,13 @@ function addProfileButton() {
     const me = getCurrentUser();
 
     profileDiv.innerHTML = `
-        <img class="profile-pfp" src="${me.pfp}" alt="Profile picture">
-        <div class="profile-info">
-            <div class="profile-name">${me.surname} ${me.name}</div>
-            <div class="profile-username">@${me.username}</div>
-        </div>
+        <a href="../profile/index.html">
+            <img class="profile-pfp" src="${me.pfp}" alt="Profile picture">
+            <div class="profile-info">
+                <div class="profile-name">${me.surname} ${me.name}</div>
+                <div class="profile-username">@${me.username}</div>
+            </div>
+        </a>
     `;
 }
 
@@ -63,10 +65,10 @@ function addPosts(search = "") {
                 <div class='post-author'>
                     <img class='author-pfp' src='${author.pfp}'>
                     <h4>@${author.username} (${author.surname} ${author.name})</h4>
-                            
+
                     ${post.author !== currentUser.email ?
                         `<div class="follow-actions">
-                            ${isfollowing ? "<img class='follow-icon' src='./public/user_followed.svg' width='24px'>" : ""}
+                            ${isfollowing ? "<img class='follow-icon' src='../public/icons/user_followed.svg' width='24px'>" : ""}
                                 <button
                                     class='follow-button'
                                     onclick="${isfollowing
@@ -86,19 +88,19 @@ function addPosts(search = "") {
                 ` : ''}
 
                 <button id='like-button' onclick="like(posts[${i}], '${currentUser.email}')">
-                    <img src='./public/${likeImage}' width='24px'>
+                    <img src='../public/icons/${likeImage}' width='24px'>
                     ${getLikes(post)}
                 </button>
 
                 <button id='favorite-button' onclick="favorite(posts[${i}], '${currentUser.email}')">
-                    <img src='./public/${favImage}' width='24px'>
+                    <img src='../public/icons/${favImage}' width='24px'>
                     ${getFavorites(post)}
                 </button>
 
                 ${author.email === currentUser.email ?
                     `<button id='delete-button' onclick="deletePost(posts[${i}])">
-                        <img class="normal" src='./public/delete.svg' width='24px'>
-                        <img class="hover" src="./public/delete_selected.svg" width='24px'>
+                        <img class="normal" src='../public/icons/delete.svg' width='24px'>
+                        <img class="hover" src="../public/icons/delete_selected.svg" width='24px'>
                         Supprimer
                      </button>
                 ` : ''}
