@@ -42,5 +42,5 @@ loginform.addEventListener("submit", (e) => {
     saveCurrentUser(user);
 
     loginform.reset()
-    feed();
+    window.location.href="../feed/index.html"
 });

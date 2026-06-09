@@ -2,7 +2,7 @@ addEventListener("DOMContentLoaded", (e) => {
     const me = JSON.parse(localStorage.getItem("me"));
 
     if(!me) {
-        back();
+        window.location.href = "../index.html";
     }
 })
 
@@ -84,5 +84,5 @@ postform.addEventListener("submit", (e) => {
     savePosts();
 
     postform.reset()
-    feed();
+    window.location.href="../feed/index.html"
 });

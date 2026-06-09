@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/profile.css">
+        <link rel="stylesheet" href="../css/feed.css">
+        <title>Ton Profil - Noxel</title>
+    </head>
+    <body>
+        <div class="contenu">
+            <nav class="navbar">
+                <div id="branding">
+                    <img src="../public/images/noxel_logo.svg" width="64px">
+                    <p>Noxel</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="../feed/index.html">
+                            <img src="../public/icons/home.svg" width="32px">
+                            Fil d'actualité
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../relations/index.html">
+                            <img src="../public/icons/relations.svg" width="32px">
+                            Relations
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="../messagery/index.html">
+                            <img src="../public/icons/message.svg" width="32px">
+                            Messagerie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../favorites/index.html">
+                            <img src="../public/icons/favorite.svg" width="32px">
+                            Favoris
+                        </a>
+                    </li>
+                </ul>
+                <a id="post-button" href="../newpost/index.html">Nouvelle Publication</a>
+                <div id="profile"></div>
+            </nav>
+
+            <div class="profile">
+                <h1>Ton Profil</h1>
+
+                <div id="profile-section"></div>
+
+                <button id="edit-profile" class="profile-edit-btn" onclick="editProfil()">
+                    Modifier le profil
+                </button>
+            </div>
+        </div>
+    </body>
+    <script src="../js/feed.js"></script>
+    <script src="../js/users.js"></script>    
+    <script src="../js/edit-pfp.js"></script>
+    <script src="../js/profile.js"></script>
+</html>
+

@@ -2,7 +2,7 @@ addEventListener("DOMContentLoaded", (e) => {
     const me = JSON.parse(localStorage.getItem("me"));
 
     if(!me) {
-        back();
+        window.location.href = "../index.html";
     }
 
     addProfileData();
