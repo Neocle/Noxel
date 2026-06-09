@@ -90,7 +90,7 @@ signupform.addEventListener("submit", (e) => {
     saveCurrentUser(user);
 
     signupform.reset()
-    window.location.href="./firstProfile.html"
+    window.location.href="./firstprofile.html"
 });
 
 function hasNumbers(str) {
