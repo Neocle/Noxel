@@ -44,19 +44,24 @@
             </nav>
 
             <div class="profile">
-                <h1>Ton Profil</h1>
+                <div class="profile-actions">
+                    <h1>Ton Profil</h1>
+                    <a class="profile-edit" href="../profileedit/index.html">
+                        Modifier
+                    </a>
+                    <a class="profile-logout" onclick="logout()">
+                        Se déconnecter
+                    </a>
+                </div>
 
                 <div id="profile-section"></div>
-
-                <button id="edit-profile" class="profile-edit-btn" onclick="editProfil()">
-                    Modifier le profil
-                </button>
+                <div id="posts"></div>
             </div>
         </div>
     </body>
+    <script src="../js/posts.js"></script>
     <script src="../js/feed.js"></script>
     <script src="../js/users.js"></script>    
-    <script src="../js/edit-pfp.js"></script>
     <script src="../js/profile.js"></script>
 </html>
 
