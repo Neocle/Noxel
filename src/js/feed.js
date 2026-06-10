@@ -181,7 +181,7 @@ function addPosts(search = "") {
         favoriteButton.appendChild(favIcon);
         
         const nbFavorites = document.createElement('p');
-        nbLikes.textContent = getFavorites(post);
+        nbFavorites.textContent = getFavorites(post);
         favoriteButton.appendChild(nbFavorites);
         favoriteButton.addEventListener('click', () => {
             favorite(posts[i], currentUser.email)
@@ -236,7 +236,7 @@ function addPosts(search = "") {
 
 function showImg(src) {
     document.getElementById("imgfull").src = src;
-    document.getElementById("imgfulldiv").style.display = "grid";
+    document.getElementById("imgfulldiv").style.display = " ";
 }
 
 function closeImg() {
