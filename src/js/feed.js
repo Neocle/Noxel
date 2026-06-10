@@ -11,7 +11,7 @@ addEventListener("DOMContentLoaded", (e) => {
         addPosts("", true);
         return;
     }
-    
+
     addPosts();
 })
 
@@ -247,7 +247,7 @@ function addPosts(search = "", onlyAuthor = false) {
 
 function showImg(src) {
     document.getElementById("imgfull").src = src;
-    document.getElementById("imgfulldiv").style.display = " ";
+    document.getElementById("imgfulldiv").style.display = "grid";
 }
 
 function closeImg() {
