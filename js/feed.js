@@ -6,6 +6,12 @@ addEventListener("DOMContentLoaded", (e) => {
     }
 
     addProfileButton();
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+    
     addPosts();
 })
 
@@ -43,11 +49,13 @@ function addProfileButton() {
 
 const searchInput = document.getElementById("searchinput");
 
-searchInput.addEventListener("input", () => {
-    addPosts(searchInput.value);
-});
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        addPosts(searchInput.value);
+    });
+}
 
-function addPosts(search = "") {
+function addPosts(search = "", onlyAuthor = false) {
 
     // recuperation et suppression de tous les posts deja present
     // pour eviter qu'ils se dupliquent
@@ -214,6 +222,9 @@ function addPosts(search = "") {
             });
             postDiv.appendChild(deleteButton);
         }
+
+        if (post.author !== currentUser.email && onlyAuthor)
+            continue;
 
         postsdiv.appendChild(postDiv);
     }

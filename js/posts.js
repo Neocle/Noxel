@@ -33,6 +33,12 @@ function like(post, likeauthor) {
     post.likes.push(likeauthor);
     savePosts();
     loadPosts()
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -45,6 +51,12 @@ function favorite(post, favoriteauthor) {
     post.favorites.push(favoriteauthor);
     savePosts();
     loadPosts();
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -57,6 +69,12 @@ function unlike(post, likeauthor) {
     post.likes = post.likes.filter(author => author !== likeauthor);
     savePosts();
     loadPosts();
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -69,6 +87,12 @@ function unfavorite(post, favoriteauthor) {
     post.favorites = post.favorites.filter(author => author !== favoriteauthor);
     savePosts();
     loadPosts()
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -80,5 +104,35 @@ function deletePost(post) {
 
     savePosts();
     loadPosts()
+
+    if (window.location.href.includes("profile")) {
+        addPosts("", true);
+        return;
+    }
+
     addPosts();
+}
+
+function getNbPosts(user) {
+    let c = 0;
+
+    for(let i =0; i < posts.length; i++) {
+        if (posts[i].author === user.email) {
+            c++;
+        }
+    }
+
+    return c;
+}
+
+function getNbLikes(user) {
+    let l = 0;
+
+    for(let i =0; i < posts.length; i++) {
+        if (posts[i].author === user.email) {
+            l+= posts[i].likes.length;
+        }
+    }
+
+    return l;
 }
