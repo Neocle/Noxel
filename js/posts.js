@@ -39,6 +39,16 @@ function like(post, likeauthor) {
         return;
     }
 
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -54,6 +64,16 @@ function favorite(post, favoriteauthor) {
 
     if (window.location.href.includes("profile")) {
         addPosts("", true);
+        return;
+    }
+
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
         return;
     }
 
@@ -75,6 +95,16 @@ function unlike(post, likeauthor) {
         return;
     }
 
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -93,6 +123,16 @@ function unfavorite(post, favoriteauthor) {
         return;
     }
 
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
+        return;
+    }
+
     addPosts();
 }
 
@@ -107,6 +147,16 @@ function deletePost(post) {
 
     if (window.location.href.includes("profile")) {
         addPosts("", true);
+        return;
+    }
+
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
         return;
     }
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mon Feed</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/feed.css">
+
+        <link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/public/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Noxel" />
+        <link rel="manifest" href="/public/favicon/site.webmanifest" />
+    </head>
+    <body>
+        <div class="contenu">
+            <nav class="navbar">
+                <div id="branding">
+                    <img src="../public/images/noxel_logo.svg" width="64px">
+                    <p>Noxel</p>
+                </div>
+                
+                <ul>
+                    <li>
+                        <a href="../feed/index.html">
+                            <img src="../public/icons/home.svg" width="32px">
+                            Fil d'actualité
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../relations/index.html">
+                            <img src="../public/icons/relations.svg" width="32px">
+                            Relations
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="../messagery/index.html">
+                            <img src="../public/icons/message.svg" width="32px">
+                            Messagerie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../favorites/index.html">
+                            <img src="../public/icons/favorite_selected.svg" width="32px">
+                            Favoris
+                        </a>
+                    </li>
+                </ul>
+                <a id="post-button" href="../newpost/index.html">Nouvelle Publication</a>
+                <div id="profile"></div>
+            </nav>
+            <div class="feed" id="feed">
+                <div id="searchbar">
+                    <input id="searchinput" placeholder="Rechercher une publication...">
+                </div>
+                <div id="imgfulldiv" class="post-image-full" onclick="closeImg()">
+                    <img id="imgfull" src="">
+                </div>
+
+                <div id="posts"></div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/feed.js"></script>
+    <script src="../js/users.js"></script>
+    <script src="../js/posts.js"></script>
+</html>

@@ -12,6 +12,16 @@ addEventListener("DOMContentLoaded", (e) => {
         return;
     }
 
+    if (window.location.href.includes("favorites")) {
+        addPosts("", false, true);
+        return;
+    }
+
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
+        return;
+    }
+
     addPosts();
 })
 
@@ -55,8 +65,7 @@ if (searchInput) {
     });
 }
 
-function addPosts(search = "", onlyAuthor = false) {
-
+function addPosts(search = "", onlyAuthor = false, onlyFavorites = false, onlyRelations = false) {
     // recuperation et suppression de tous les posts deja present
     // pour eviter qu'ils se dupliquent
     const postsdiv = document.getElementById("posts");
@@ -72,6 +81,15 @@ function addPosts(search = "", onlyAuthor = false) {
         const post = posts[i];
         const author = getUser(post.author);
         const currentUser = getCurrentUser();
+
+        if (!post.favorites.includes(currentUser.email) && onlyFavorites)
+            continue;
+
+        if (post.author !== currentUser.email && onlyAuthor)
+            continue;
+
+        if (!currentUser.follows.includes(post.author) && onlyRelations)
+            continue;
 
         const postcontnent = `
             ${post.title}
@@ -222,9 +240,6 @@ function addPosts(search = "", onlyAuthor = false) {
             });
             postDiv.appendChild(deleteButton);
         }
-
-        if (post.author !== currentUser.email && onlyAuthor)
-            continue;
 
         postsdiv.appendChild(postDiv);
     }

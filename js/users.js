@@ -101,6 +101,11 @@ function unfollow(emailUser1, emailUser2) {
     saveUsers();
     saveCurrentUser();
 
+    if (window.location.href.includes("relations")) {
+        addPosts("", false, false, true);
+        return;
+    }
+
     addPosts();
 }
 
