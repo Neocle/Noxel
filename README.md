@@ -31,3 +31,9 @@ This web application is completely client sided, meaning that everything stays o
 - This project is made entirely by hand by myself (Loïs ALIROL)!
 - It is licensed under the GPLv3 License, meaning you are free to modify, share and read the source code
 - It was made for a school project and i don't plan on maintaining it afterwards.
+
+Feed page:
+<img width="1280" height="720" alt="Capture d’écran 2026-06-11 à 11 57 23" src="https://github.com/user-attachments/assets/cbccc015-ef14-4a23-b0d9-797ba246dba7" />
+
+Profile page:
+<img width="1280" height="720" alt="Capture d’écran 2026-06-11 à 11 58 01" src="https://github.com/user-attachments/assets/1c2d1efd-3b36-424b-b34f-00fac694db02" />
