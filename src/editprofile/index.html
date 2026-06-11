@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/editprofile.css">
+        <title>Modifier Profil - Noxel</title>
+
+        <link rel="icon" type="image/png" href="/public/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/public/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Noxel" />
+        <link rel="manifest" href="/public/favicon/site.webmanifest" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="entete">
+                <a class="back-button" href="../profile/index.html">
+                    <img class="back-icon" src="../public/icons/back.svg" height="36px">
+                </a>
+                <h1>Modifier profil.</h1>
+            </div>
+
+            <form id="edit-profile-form">
+                <p id="error"></p>
+
+                <input type="file" id="image-input" accept="image/*" hidden/>
+                <img id="pfp" src="../public/images/default_pfp.jpg" width="128px">
+                <button type="button" id="image" onclick="edit()">Modifier</button>
+
+                <label for="username">PSEUDO</label>
+                <input type="text" id="username" required>
+
+                <div class="nom-prenom">
+                    <div class="name">
+                        <label for="name">NOM</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="surname">
+                        <label for="surname">PRÉNOM</label>
+                        <input type="text" id="surname">
+                    </div>
+                </div>
+
+                <label for="email">ADRESSE EMAIL</label>
+                <input type="email" id="email">
+
+                <label for="old-password">ANCIEN MOT DE PASSE</label>
+                <input type="password" id="old-password">
+
+                <label for="new-password">NOUVEAU MOT DE PASSE</label>
+                <input type="password" id="new-password">
+
+                <button id="save-button" type="submit">Enregistrer</button>
+            </form>
+        </div>
+    </body>
+    <script src="../js/users.js"></script>
+    <script src="../js/posts.js"></script>
+    <script src="../js/edit-pfp.js"></script>
+    <script src="../js/edit-profile.js"></script>
+</html>
